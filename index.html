@@ -1,0 +1,234 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <!-- bootstrap icons  -->
+  <link rel="stylesheet" href="./assets/css/vendors/bootstrap-icons.css">
+  <!-- bootstrap min  -->
+  <link rel="stylesheet" href="./assets/css/vendors/bootstrap.min.css">
+  <!-- main style -->
+  <link rel="stylesheet" href="./assets/css/main.css">
+</head>
+<body>
+  <div class="scrollProgress" ></div>
+  <!-- start landing  -->
+  <section class="landing position-relative second-bg section-full-hight bg-landing" style="z-index: 1;">
+    <div class="section-overlay"></div>
+    <!-- start nav -->
+    <nav class="navbar navbar-expand-lg p-0 p-lg-3 ">
+      <div class="container nav-container">
+        <a class="navbar-brand" href="#">
+          <img src="./assets/images/bubbles.png" class="logo img-fluid" alt="">
+          <span class="ms-2" >Clean Work</span>
+        </a>
+        <div class="navbar-toggler border-0"  data-target="navbarMenu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="collapse navbar-collapse" id="navbarMenu">
+          <ul class="navbar-nav ms-auto align-items-lg-center mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About Us</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#"data-target="dropdown-menu">
+                Pages
+              </a>
+              <ul class="dropdown-menu main-shadow">
+                <li><a class="dropdown-item" href="our-services.html">Our Services</a></li>
+                <li><a class="dropdown-item" href="coming-soon.html">Coming Soon</a></li>
+                <li><a class="dropdown-item" href="page404.html">Page 404</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+            <li class="nav-item ms-lg-3">
+              <a class="nav-link main-btn main-btn--outline " href="#">Get started</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- end nav  -->
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ffffff" fill-opacity="1" d="M0,192L48,213.3C96,235,192,277,288,266.7C384,256,480,192,576,181.3C672,171,768,213,864,202.7C960,192,1056,128,1152,117.3C1248,107,1344,149,1392,170.7L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+    <div class=" row g-0 vh-100 align-items-center">
+      <div class="col-md-7 main-landingText text-center mx-auto">
+          <h1 class="mb-4 pb-2">
+            <span>
+              We clean your 
+            </span>
+            <span class="change-word" style="width:206px;">
+              <strong>House</strong>
+              <strong>Kitchen</strong>
+              <strong>office</strong>
+            </span>
+          </h1>
+          <a href="#" class="btn main-btn main-btn--scroll me-3 scrollTo" data-target="service">
+              <span >Introduction</span>
+              <div class="marquee" aria-hidden="true">
+                <div class="marquee__inner" >
+                  <span >Introduction</span>
+                  <span >Introduction</span>
+                  <span >Introduction</span>
+                  <span >Introduction</span>
+                </div>
+              </div>
+          </a>
+          <a href="#" class="btn main-btn main-btn--outline scrollTo" data-target="offer">Explore Services</a>
+      </div>
+      <div class="slideshow">
+        <img src="./assets/images/slideshow/unrecognizable-cleaner-walking-into-hotel-room-with-tools-detergents.jpg" alt="">
+        <img src="./assets/images/slideshow/afro-woman-holding-bucket-with-cleaning-items.jpg" alt="">
+        <img src="./assets/images/slideshow/afro-woman-cleaning-window-with-rag-home.jpg" alt="">
+      </div>
+    </div>
+  </section>
+  <!-- end landing  -->
+  <!-- start Service -->
+  <section class="service" id="service" style="padding-top: 50px;">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <div>
+            <h2 class="mb-3" >Reliable & Fast Cleaning <br> Service</h2>
+            <p><a href="#">Clean Work</a> is a Bootstrap v.5.1.3 HTML CSS template for free download provided by Tooplate. You can use this layout for any purpose. Images are taken from <a href="#">FreePik</a> and <a href="#">WorldVectorLogo</a> websites.</p>
+            <p>You <b>may not</b> redistribute this template ZIP file on any other template collection website. Please <a href="#">contact us</a> for more info. Thank you.</p>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="position-relative" >
+          <img src="./assets/images/male-wearing-apron-female-white-t-shirt-smiling-broadly-being-glad-clean.png" class="img-fluid" alt="">
+          <div class="mainCard position-absolute bottom-0 mb-0 end-0" style="max-width: 200px;">
+            <h6 class="mb-3 text-white" >Need Help?Please call us:</h6>
+            <a href="tel:+01118129509" class="text-white">+01118129509</a>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end Service -->
+  <!-- start offers  -->
+  <section class="offer section-padding light-bg" id="offer">
+    <div class="container">
+      <h2 class="mb-4">Our best offers</h2>
+      <div class="row" id="offerContent">
+      </div>
+    </div>
+  </section>
+  <!-- end offers  -->
+  <!-- start tistimolans  -->
+  <section class="small-section-padding tistimolans-bg small-paddingBottom position-relative">
+    <div class="section-overlay" ></div>
+    <div class="container">
+      <h2 class="text-center text-white mb-4" >Happy Customers</h2>
+      <div class="row" id="tistimolans-data">
+      </div>
+    </div>
+  </section>
+  <!-- end tistimolans  -->
+  <!-- start Trusted by companies -->
+  <div class="trusted" >
+    <div class="container">
+      <div class="row justify-content-center align-items-center">
+        <div class="col-12 text-center">
+          <h4 class="bg-white position-relative m-auto rounded-pill main-shadow" style=" padding:10px 20px ; width: fit-content; transform: translateY(-100%); z-index: 1;" >Trusted by companies</h4>
+        </div>
+        <div class="col-6 col-lg-2 col-md-4 text-center">
+          <img src="./assets/images/partners/toprak-leasing.svg" class="img-fluid trusted-img" alt="">
+        </div>
+        <div class="col-6 col-lg-2 col-md-4 text-center">
+          <img src="./assets/images/partners/glorix.svg" class="img-fluid trusted-img" alt="">
+        </div>
+        <div class="col-6 col-lg-2 col-md-4 text-center">
+          <img src="./assets/images/partners/woocommerce.svg" class="img-fluid trusted-img" alt="">
+        </div>
+        <div class="col-6 col-lg-2 col-md-4 text-center">
+          <img src="./assets/images/partners/rolf-leasing.svg" class="img-fluid trusted-img" alt="">
+        </div>
+        <div class="col-6 col-lg-2 col-md-4 text-center">
+          <img src="./assets/images/partners/unilabs.svg" class="img-fluid trusted-img" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end Trusted by companies-->
+  <!-- start footer  -->
+  <footer class="small-paddingTop  main-bg mainFooter" >
+    <div class="container small-paddingBottom">
+      <div class="row">
+          <div class="col-12 mb-5">
+            <div class="navbar-brand d-flex align-items-center">
+              <img src="./assets/images/bubbles.png" class="logo img-fluid" alt="">
+              <ul class="custom-list ms-5 flex-wrap gap-2" >
+              <li><a href="#" class="ms-2" >About Us</a></li>
+              <li><a href="#" class="ms-2" >Blog</a></li>
+              <li><a href="#" class="ms-2" >Reviews</a></li>
+              <li><a href="#" class="ms-2" >Contact</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-5 mb-4">
+            <h5 class="mb-3" >Our Services</h5>
+            <ul class="custom-list d-block footer-list">
+              <li class="mb-1" ><a href="#"><i class="bi bi-chevron-double-right me-2"></i> House Cleaning</a></li>
+              <li class="mb-1" ><a href="#"><i class="bi bi-chevron-double-right me-2"></i>Car Washing</a></li>
+              <li class="mb-1" ><a href="#"><i class="bi bi-chevron-double-right me-2"></i>Landry</a></li>
+              <li class="mb-1" ><a href="#"><i class="bi bi-chevron-double-right me-2"></i>Office Cleaning</a></li>
+              <li class="mb-1" ><a href="#"><i class="bi bi-chevron-double-right me-2"></i>Toilet Cleaning</a></li>
+            </ul>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-4 mb-lg-0" >
+            <h5 class="mb-3" >Office</h5>
+            <ul class="custom-list d-block mb-4" >
+              <li><p><i class="bi bi-geo-alt-fill me-2"></i>Akershusstranda 20, 0150 Oslo, Norway</p></li>
+              <li class="mb-1" ><a href="tel:+01118129509"><i class="bi bi-telephone-fill me-2"></i>01118129509</a></li>
+              <li class="mb-1" ><a href="mailto:anabogy537@gmail.com"><i class="bi bi-envelope-fill me-2"></i>anabogy537@gmail.com</a></li>
+            </ul>
+            <ul class=" custom-list social" >
+              <li><a href="https://github.com/AbdElkader-mohamed"><i class="bi bi-twitter"></i></a></li>
+              <li><a href="https://www.facebook.com/abd.mohamed.7731/"><i class="bi bi-facebook"></i></a></li>
+              <li><a href="https://www.instagram.com/bogy_mohamed7/"><i class="bi bi-instagram"></i></a></li>
+            </ul>
+          </div>
+          <div class="col-md-6 col-lg-3 p-3" >
+            <h5 class="mb-3" >Service Hours</h5>
+            <strong class="mb-1" >Mon - Fri</strong>
+            <p>8:00 AM - 5:30 PM</p>
+            <strong class="mb-1" >Sat</strong>
+            <p>6:00 AM - 2:30 PM</p>
+          </div>
+      </div>
+    </div>
+    <hr>
+    <div class="container pb-4 pt-1" >
+      <div class="row align-items-center">
+          <div class="col-6">
+            <p class="mb-0" style="font-size: 14px;">Copyright © <script>document.write(new Date().getFullYear())</script> Abd Elkader Mohamed</p>
+          </div>
+          <div class="col-6 text-end">
+            Made With <strong class="fs-2 text-danger" >&hearts;</strong> By Boda
+          </div>
+      </div>
+    </div>
+  </footer>
+  <!-- end footer  -->
+  <div class="scroll-to-top"><div class="shack"><i class="bi bi-chevron-double-up "></i></div></div>
+  <!-- animations -->
+  <script src="js/animation.js"></script>
+  <!-- offer data -->
+  <script src="js/offers-data.js"></script>
+  <!-- add tistimolans   -->
+  <script src="js/tistimolans-data.js"></script>
+  <!-- main logic  -->
+  <script src="js/main.js"></script>
+</body>
+</html>
