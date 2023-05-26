@@ -1,39 +1,36 @@
-(function getData() {
-  fetch("../assets/content/card-office.json")
-  .then( (response) => response.json())
-  .then((info) => {
+(async function getData() {
+  let data = await fetch("../assets/content/card-office.json")
+  data = await data.json()
       document.getElementById("office-data").innerHTML += `
       <div class="col-lg-6">
       <div class="position-relative rounded-4 overflow-hidden " >
         <a href="services-detail.html" class="position-relative">
-          <img src="${info.firstImg}" class="img-fluid cardImg services " alt="">
-          <img src="${info.secondImg}" class="img-fluid cardImg services cardImgHover" alt="">
+          <img src="${data.firstImg}" class="img-fluid cardImg services " alt="">
+          <img src="${data.secondImg}" class="img-fluid cardImg services cardImgHover" alt="">
         </a>
         <div class="second-bg d-flex justify-content-between position-absolute bottom-0 w-100" >
-          <p class="text-white mb-0 p-2" ><i class="bi bi-cash me-2"></i>$${info.salary}</p>
-          <p class="text-white mb-0 p-2" > <i class="bi bi-clock-fill me-2"></i> ${info.hours} hrs</p>
+          <p class="text-white mb-0 p-2" ><i class="bi bi-cash me-2"></i>$${data.salary}</p>
+          <p class="text-white mb-0 p-2" > <i class="bi bi-clock-fill me-2"></i> ${data.hours} hrs</p>
         </div>
       </div>
     </div>
     <div class="col-lg-6">
       <div class="p-4">
-        <h2 class="mb-4" >${info.cardTitle1} </h2>
-        <p class="mb-4" >${info.cardContent1} <a href="#">${info.linkHash}</a></p>
-        <h5>${info.cardTitle2}</h5>
-        <p>${info.cardContent2}</p>
-        <h5>${info.cardTitle3}</h5>
-        <p>${info.cardContent3}</p>
+        <h2 class="mb-4" >${data.cardTitle1} </h2>
+        <p class="mb-4" >${data.cardContent1} <a href="#">${data.linkHash}</a></p>
+        <h5>${data.cardTitle2}</h5>
+        <p>${data.cardContent2}</p>
+        <h5>${data.cardTitle3}</h5>
+        <p>${data.cardContent3}</p>
       </div>
     </div>
       `
-  })
 })()
 
-function getDataCards() {
-  const newLocal = fetch("../assets/content/offers.json")
-    .then((response) => response.json())
-    .then((info) => {
-      info.forEach(card => {
+async function getDataCards() {
+  let data = await fetch("../assets/content/offers.json");
+  data = await data.json()
+      data.forEach(card => {
         if (card.case) {
           document.getElementById("related-data").innerHTML += `
           <div class="col-lg-6">
@@ -80,7 +77,6 @@ function getDataCards() {
       </div>
       `;
     }
-    });
     });
 }
 getDataCards();

@@ -1,8 +1,7 @@
-(function getData() {
-  const newLocal = fetch("../assets/content/offers.json")
-    .then((response) => response.json())
-    .then((info) => {
-      info.forEach(card => {
+(async function getData() {
+  let data = await fetch("../assets/content/offers.json")
+  data = await data.json();
+      data.forEach(card => {
         document.getElementById("offerContent").innerHTML += `
       <div class="col-lg-6">
   <div class="mainCard mainCard--light">
@@ -48,5 +47,4 @@
   </div>
       `;
       });
-    });
 })()

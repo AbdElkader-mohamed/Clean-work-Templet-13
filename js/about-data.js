@@ -1,43 +1,8 @@
-function getDataAbout() {
-  fetch("../assets/content/about-data.json")
-  .then( (response) => response.json())
-  .then((info) => {
-      document.getElementById("about-data").innerHTML += `
-      <div class="row align-items-center">
-      <div class="col-lg-6">
-        <div class="border-radius" >
-        <img src="${info.img}" class="img-fluid" alt="">
-        </div>
-      </div>
-      <div class="col-lg-6">
-        <div class="p-3" >
-          <h2 class="mb-4 mt-3" >${ info.header}</h2>
-          <p> ${info.content1} <a href="#">${info.linkHash}</a>.</p>
-          <p class="mb-4" >${info.content2}</p>
-          <a href="contact.html" class="btn main-btn main-btn--scroll me-3 scrollTo" data-target="service">
-            <span >Get in touch</span>
-            <div class="marquee" aria-hidden="true">
-              <div class="marquee__inner" >
-                <span >Get in touch</span>
-                <span >Get in touch</span>
-                <span >Get in touch</span>
-                <span >Get in touch</span>
-              </div>
-            </div>
-          </a>
-        </div>
-      </div>
-      </div>
-      `
-  })
-}
 getDataAbout();
-function getDataTeam() {
-  fetch("../assets/content/team-data.json")
-  .then( (response) => response.json())
-  .then((info) => {
-    info.forEach(card => {
-      console.log(card)
+async function getDataTeam() {
+  let data = await fetch("../assets/content/team-data.json")
+  data = await data.json()
+  data.forEach(card => {
     document.getElementById("team-data").innerHTML += `
     <div class="col-lg-6">
     <div class="row">
@@ -55,6 +20,36 @@ function getDataTeam() {
   </div>
   `
   });
-  })
 }
 getDataTeam();
+async function getDataAbout() {
+  let data = await fetch("../assets/content/about-data.json")
+  data = await data.json()
+    document.getElementById("about-data").innerHTML = `
+    <div class="row align-items-center">
+    <div class="col-lg-6">
+      <div class="border-radius" >
+      <img src="${data.img}" class="img-fluid" alt="">
+      </div>
+    </div>
+    <div class="col-lg-6">
+      <div class="p-3" >
+        <h2 class="mb-4 mt-3" >${ data.header}</h2>
+        <p> ${data.content1} <a href="#">${data.linkHash}</a>.</p>
+        <p class="mb-4" >${data.content2}</p>
+        <a href="contact.html" class="btn main-btn main-btn--scroll me-3 scrollTo" data-target="service">
+          <span >Get in touch</span>
+          <div class="marquee" aria-hidden="true">
+            <div class="marquee__inner" >
+              <span >Get in touch</span>
+              <span >Get in touch</span>
+              <span >Get in touch</span>
+              <span >Get in touch</span>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+    </div>
+    `
+}
