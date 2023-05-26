@@ -1,6 +1,6 @@
 getDataAbout();
 async function getDataTeam() {
-  let data = await fetch("../assets/content/team-data.json",{headers: {accept: "application/json"}})
+  let data = await fetch("../assets/content/team-data.json",{headers: {accept: "application/json","Content-type": "application/json"}})
   data = await data.json()
   data.forEach(card => {
     document.getElementById("team-data").innerHTML += `

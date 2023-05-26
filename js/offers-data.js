@@ -1,5 +1,5 @@
-(async function getData() {
-  let data = await fetch("../assets/content/offers.json",{headers: {accept: "application/json"}})
+async function getData() {
+  let data = await fetch("../assets/content/offers.json",{headers: {accept: "application/json","Content-type": "application/json"}})
   data = await data.json();
       data.forEach(card => {
         document.getElementById("offerContent").innerHTML += `
@@ -47,4 +47,5 @@
   </div>
       `;
       });
-})()
+}
+getData()
