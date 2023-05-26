@@ -1,5 +1,5 @@
 (async function getData() {
-  let data = await fetch("../assets/content/card-office.json")
+  let data = await fetch("../assets/content/card-office.json",{headers: {accept: "application/json"}})
   data = await data.json()
       document.getElementById("office-data").innerHTML += `
       <div class="col-lg-6">
@@ -28,7 +28,7 @@
 })()
 
 async function getDataCards() {
-  let data = await fetch("../assets/content/offers.json");
+  let data = await fetch("../assets/content/offers.json",{headers: {accept: "application/json"}});
   data = await data.json()
       data.forEach(card => {
         if (card.case) {

@@ -1,5 +1,5 @@
 (async function getData() {
-  let data = await fetch("../assets/content/offers.json")
+  let data = await fetch("../assets/content/offers.json",{headers: {accept: "application/json"}})
   data = await data.json();
       data.forEach(card => {
         document.getElementById("offerContent").innerHTML += `
