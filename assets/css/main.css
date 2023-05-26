@@ -431,8 +431,8 @@ p {
     transition: all .3s linear;
   }
   .navbar-collapse.active {
-    max-height: 420px;
-    min-height: 420px;
+    max-height: 320px;
+    min-height: 320px;
   }
   .navbar-collapse,
   .navbar  {
@@ -442,14 +442,15 @@ p {
     color: var(--para-color);
     margin: 12px var(--main-margin);
   }
+  .navbar .nav-item:hover{
+    background-color:var(--light-bg);
+  }
   .navbar  .nav-link.main-btn--outline{
     background-color:var(--second-color);
     border-color:var(--second-color);
   }
   .navbar .dropdown-menu {
-    transform: translateY(0);
-    visibility: visible;
-    opacity: 1;
+    position: absolute;
   }
   
 }
