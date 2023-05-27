@@ -1,4 +1,3 @@
-getDataAbout();
 async function getDataTeam() {
   let data = await fetch("../assets/content/team-data.json",{headers: {accept: "application/json","Content-type": "application/json"}})
   data = await data.json()
@@ -53,3 +52,5 @@ async function getDataAbout() {
     </div>
     `
 }
+getDataAbout();
+
