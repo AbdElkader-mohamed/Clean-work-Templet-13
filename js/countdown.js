@@ -1,4 +1,4 @@
-(function calender() {
+function calender() {
   let countDown;
   countDown = new Date("5 16, 2024 23:59:59").getTime() ;
 document.querySelector("#form").addEventListener("submit", _=>{
@@ -26,4 +26,5 @@ let counter = setInterval(() => {
     let seconds = Math.floor((dateDiff % (1000 * 60 )) / 1000 ) ;
     document.querySelector("#countdown-seconds").innerHTML =  seconds < 10 ? `0${seconds}` : seconds ;
 }, 1000) ;
-})()
+}
+calender()

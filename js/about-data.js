@@ -1,7 +1,7 @@
 async function getDataTeam() {
-  let data = await fetch("../assets/content/team-data.json",{headers: {accept: "application/json","Content-type": "application/json"}})
+  let data = await fetch("https://abdelkader-mohamed.github.io/my-data-/clean-work/clean-work.json")
   data = await data.json()
-  data.forEach(card => {
+  data.team.forEach(card => {
     document.getElementById("team-data").innerHTML += `
     <div class="col-lg-6">
     <div class="row">
@@ -22,8 +22,9 @@ async function getDataTeam() {
 }
 getDataTeam();
 async function getDataAbout() {
-  let data = await fetch("../assets/content/about-data.json",{headers: {accept: "application/json"}})
-  data = await data.json()
+  let data = await fetch("https://abdelkader-mohamed.github.io/my-data-/clean-work/clean-work.json")
+  data = await data.json();
+  data = data.about
     document.getElementById("about-data").innerHTML = `
     <div class="row align-items-center">
     <div class="col-lg-6">

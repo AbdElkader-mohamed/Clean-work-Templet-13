@@ -1,7 +1,7 @@
 async function getData() {
-  let data = await fetch("../assets/content/customers.json",{headers: {accept: "application/json","Content-type": "application/json",}});
+  let data = await fetch("https://abdelkader-mohamed.github.io/my-data-/clean-work/clean-work.json");
   data = await data.json()
-    data.forEach(card => {
+    data.customers.forEach(card => {
       document.getElementById("tistimolans-data").innerHTML += `
       <div class="col-md-4">
       <div class="mainCard mainCard--second" >

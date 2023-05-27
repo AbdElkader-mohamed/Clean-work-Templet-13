@@ -1,6 +1,7 @@
-(async function getData() {
-  let data = await fetch("../assets/content/card-office.json",{headers: {accept: "application/json","Content-type": "application/json"}})
-  data = await data.json()
+async function getData() {
+  let data = await fetch("https://abdelkader-mohamed.github.io/my-data-/clean-work/clean-work.json");
+  data = await data.json();
+  data = data.card;
       document.getElementById("office-data").innerHTML += `
       <div class="col-lg-6">
       <div class="position-relative rounded-4 overflow-hidden " >
@@ -25,12 +26,13 @@
       </div>
     </div>
       `
-})()
+}
+getData()
 
 async function getDataCards() {
-  let data = await fetch("../assets/content/offers.json",{headers: {accept: "application/json","Content-type": "application/json",}});
+  let data = await fetch("https://abdelkader-mohamed.github.io/my-data-/clean-work/clean-work.json");
   data = await data.json()
-      data.forEach(card => {
+      data.offers.forEach(card => {
         if (card.case) {
           document.getElementById("related-data").innerHTML += `
           <div class="col-lg-6">
